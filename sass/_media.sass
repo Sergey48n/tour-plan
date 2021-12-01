@@ -28,31 +28,50 @@
     max-width: 576px
     width: 92%
 
-    .navbar
-      &__search, &-menu, &__user
-        display: none
-      // &-top
-      //   &__menu-button
-      //     display: flex
-
-    .menu
-      &-button
-        display: flex
+  .navbar
+    &__search, &-menu, &__user
+      display: none
+  .menu
+    &-button
+      display: flex
+      width: 16px
+      height: 11px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      border: none
+      background-color: #fff
+      cursor: pointer
+      &__line
         width: 16px
-        height: 11px
-        padding: 0
-        align-items: center
-        justify-content: space-between
-        flex-direction: column
-        border: none
-        background-color: #fff
-        cursor: pointer
-
-        &__line
-          width: 16px
-          height: 1px
-          background-color: $text-color
+        height: 1px
+        background-color: $text-color
+  .stars
+    flex-basis: content
+  .hotel
+    padding-top: 5px
+    padding-bottom: 20px
+    &-name
+      flex-basis: 100%
+    &-wrapper
+      justify-content: space-between
+    &-info
+      &__text
+        width: 100%
+      &__name
+        margin-top: 10px
+        margin-bottom: 0
+      &__rating
+        display: none
+      &__offer
+        order: -1
+        margin-left: 0
 
 @media (max-width: 576px)
   .logo
     width: 99px
+
+@media (max-width: 375px)
+  .container
+    max-width: 340px
