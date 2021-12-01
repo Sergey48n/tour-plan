@@ -658,8 +658,8 @@ template {
     background-color: #333333;
   }
   .stars {
-    -ms-flex-preferred-size: content;
-        flex-basis: content;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
   .hotel {
     padding-top: 5px;
@@ -693,6 +693,10 @@ template {
 }
 
 @media (max-width: 576px) {
+  .navbar-top {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
   .logo {
     width: 99px;
   }
