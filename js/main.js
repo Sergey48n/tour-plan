@@ -20,7 +20,7 @@ var reviewsSlider = new Swiper('.reviews-slider', {
   // Optional parameters
   
   loop: true,
-  
+  speed: 1000,
 
 
 
