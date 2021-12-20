@@ -1195,7 +1195,7 @@ template {
   }
   .card {
     width: 340px;
-    height: 240px;
+    height: 255px;
   }
 }
 
@@ -1348,8 +1348,20 @@ template {
   .subsribe {
     width: 100%;
   }
-  .card {
-    width: 100%;
+  .activities {
+    padding-top: 5px;
+  }
+  .activities__title {
+    text-align: center;
+  }
+  .activities__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 255px;
+    width: 338px;
   }
 }
 
@@ -1395,6 +1407,15 @@ template {
     line-height: 23px;
     margin: auto;
     margin-bottom: 42px;
+  }
+  .activities__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 255px;
+    width: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */
