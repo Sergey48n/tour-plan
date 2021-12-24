@@ -944,15 +944,15 @@ template {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 99;
   width: 30px;
   height: 30px;
-  background-repeat: no-repeat;
-  background-size: 10px;
-  background-position: center;
   border: none;
-  background-color: transparent;
   cursor: pointer;
-  z-index: 99;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
 }
 
 .reviews-slider__button--prev {
