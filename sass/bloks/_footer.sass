@@ -2,6 +2,7 @@
   background-color: $dark
   color: $light
   padding-top: 108px
+  margin: 0
   padding-bottom: 46px
   &-wrapper
     display: grid
@@ -32,6 +33,7 @@
       /*grid-row: 3 / 4 */
       grid-column: span 2
     &-form
+      margin-bottom: 75px
       grid-column: span 2
   &__form
     display: flex
@@ -118,3 +120,19 @@
     font-size: 12px
     line-height: 15px
     color: $grey
+  /*Disclaimer...*/
+  &__last
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    grid-column: 2 / 5
+    &--link
+      text-decoration: none
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $light
+    &--icon
+      width: 22px
+      height: 14px
