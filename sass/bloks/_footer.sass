@@ -1,74 +1,55 @@
+
 .footer
   background-color: $dark
-  color: $light
   padding-top: 108px
-  margin: 0
-  padding-bottom: 46px
+  padding-bottom: 31px
   &-wrapper
     display: grid
     grid-template-columns: repeat(4, minmax(min-content, 1fr))
-    grid-gap: 20px
+    column-gap: 30px
     grid-auto-rows: minmax(40px, min-content)
     align-items: start
-  &__logo
-    width: 166px
-    grid-row: 1 / 3
-    align-self: stretch
-  &__categories
-    grid-row: 1 / 4
-  &__social
-    &-links
-      display: flex
-      align-items: center
-      min-width: 83px
-      justify-content: space-between
-    &-network
-      display: flex
-      align-content: start
-      grid-row: 2 / 4
-      grid-column: span 2
-      /*Выравнивание по горизонтали justify-content: center*/
-  &__contacts
-    &-details
-      /*grid-row: 3 / 4 */
-      grid-column: span 2
-    &-form
-      margin-bottom: 75px
-      grid-column: span 2
-  &__form
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
 
-  &__ul
-    padding: 0
-    margin: 0
-    list-style: none
+  &__logo
+    height: 183px
+    grid-row: 1 / 3
+    align-self: end
+
   &__title
+    text-transform: uppercase
     font-style: normal
     font-weight: bold
     font-size: 18px
     line-height: 23px
-    text-transform: uppercase
+    color: $light
     margin: 0 0 16px 0
-    &--inline
-      margin: 0 43px 0 0
     &--mb-3
       margin-bottom: 34px
+    &--inline
+      margin: 0 43px 0 0
+
+  &__ul
+    list-style: none
+    padding: 0
+    margin: 0
+
   &__item
     display: flex
     align-items: flex-start
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 160%
+    line-height: 22px
     color: $grey
     &--mb-2
-      margin-bottom: 20px
-  &__icon
-    &-wrapper
-      min-width: 40px
+      margin-bottom: 22px
+  &__link
+    text-decoration: none
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+    color: $grey
   &__text
     font-style: normal
     font-weight: normal
@@ -76,55 +57,112 @@
     line-height: 22px
     color: $grey
     margin-bottom: 22px
-  &__link
-    text-decoration: none
-    color: inherit
+
+  /*All Categories*/ 
+  &__categories
+    grid-row: 1 / 3
+
+  /*Additional Information*/
+  &__additional
+    grid-row: 1 / 2
+  /*Social Network*/ 
+  &__social
+    &-network
+      grid-row: 3 / 4
+      grid-column: 3 / 5
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 96px
+    &-links
+      display: flex
+      justify-content: space-between
+      width: 92px
+    &--icon
+      width: 22px
+      height: 22px
+
+  /*Legal Iinformation*/ 
+  &__legal
+
+  /*Contact Details*/ 
+  &__contacts
+    &-details
+      grid-row: 4 / 5
+      grid-column: span 2
+
+  &__icon
+    &-wrapper
+      min-width: 40px
+
+  /*Send us a message*/
+  &__contacts
+    &-form
+      margin-bottom: 75px
+      grid-row: 4 / 5
+      grid-column: span 2
+  &__form
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(3, minmax(50px, min-content))
+    column-gap: 30px
+    justify-items: space-between
+    align-items: end
   &__input
-    font-style: normal
-    font-weight: normal
-    font-size: 12px
-    line-height: 15px
-    background-color: $light
-    border-radius: 4px
-    border: none
-    padding: 0 23px
     height: 50px
-    margin-bottom: 15px
-    flex-basis: 48%
-  &__message
+    grid-row: 1 / 2
     font-style: normal
     font-weight: normal
     font-size: 12px
     line-height: 15px
-    background-color: $light
     padding: 18px 23px
-    border-radius: 4px
     border: none
-    flex-basis: 100%
+    border-radius: 4px
+    flex-basis: 50%
+    margin-bottom: 15px
+  &__message
+    grid-row: 2 / 3
+    grid-column: span 2
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    padding: 18px 23px
+    border: none
+    border-radius: 4px
+    flex-basis: 10%
     margin-bottom: 22px
   &__button
-    min-width: 160px
-    min-height: 50px
-    padding: 18px
-    border: none
+    grid-row: 3 / 4
+    grid-column: 1 / 2
+    width: 160px
+    height: 50px
+    padding: 18px 66px
     border-radius: 4px
     background-color: $primary
+    border: none
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: $light
   &__info
+    grid-row: 3 / 4
+    grid-column: 2 / 3
+    justify-self: end
+    align-self: center
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: $grey
+
   /*Disclaimer...*/
   &__last
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    grid-row: 6 / 7
     grid-column: 2 / 5
     &--link
       text-decoration: none
