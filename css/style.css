@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Здесь собираем все основные стили */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -388,12 +390,12 @@ template {
   margin-left: 108px;
 }
 
-.navbar-buttom {
+.navbar-bottom {
   background-color: #0A223D;
 }
 
 .navbar-menu {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 31px 0;
   display: -webkit-box;
@@ -414,6 +416,10 @@ template {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+}
+
+.navbar-menu__item--mobile_visible {
+  display: none;
 }
 
 .logo {
@@ -1476,6 +1482,7 @@ template {
   .navbar-top {
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #fff;
   }
   .navbar__search {
     margin-left: auto;
@@ -1592,8 +1599,61 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  body {
+    padding-top: 78px;
+  }
+  .navbar--mobile_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar-top {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .navbar__user--mobile_hidden, .navbar__search--mobile_hidden {
     display: none;
+  }
+  .navbar__user--mobile_visible, .navbar__search--mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+    padding-top: 30px;
+    z-index: 99;
+  }
+  .navbar-bottom--visible {
+    display: block;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile_visible {
+    display: block;
   }
   .menu-button {
     display: -webkit-box;
@@ -1620,6 +1680,11 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .user__name--light {
+    color: #fff;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .stars {
     -ms-flex-preferred-size: auto;
@@ -1717,12 +1782,24 @@ template {
 }
 
 @media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  body {
+    padding-top: 70px;
+  }
   .navbar-top {
     padding-top: 28px;
     padding-bottom: 28px;
   }
+  .navbar-bottom {
+    top: 70px;
+  }
   .logo {
     width: 99px;
+  }
+  .search__input {
+    width: 300px;
   }
   .hotel-slider {
     height: 250px;
@@ -1848,9 +1925,18 @@ template {
   .container {
     max-width: 340px;
   }
+  body {
+    padding-top: 58px;
+  }
   .navbar-top {
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+  .navbar-bottom {
+    top: 58px;
+  }
+  .search__input {
+    width: 260px;
   }
   .breadcrumb-list {
     padding: 14px 0;

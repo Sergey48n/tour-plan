@@ -6,16 +6,17 @@
     justify-content: space-between
     padding-top: 40px
     padding-bottom: 40px
-    &__menu-button
-      display: none
+    &__menu
+      &-button
+        display: none
   &__search
     margin-right: auto
     margin-left: 108px
 
-  &-buttom
+  &-bottom
     background-color: $dark
   &-menu
-    list-style-type: none
+    list-style: none
     margin: 0
     padding: 31px 0
     display: flex
@@ -28,9 +29,13 @@
       text-transform: uppercase
       font-size: 14px
       line-height: 18px
+    &__item
+      &--mobile
+        &_visible
+          display: none
+
 .logo
   width: 177px
-
 .search
   display: block
   position: relative
@@ -44,7 +49,7 @@
     height: 100%
     padding-left: 23px
     padding-right: 75px
-    background-color: #F5FAFE
+    background-color: $secondary
     border: none
     font-size: 12px
     line-height: 15px
