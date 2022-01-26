@@ -20,6 +20,43 @@ img {
   max-width: 100%;
 }
 
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  height: 50px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 18px 23px;
+}
+
+.message {
+  background-color: #fff;
+  padding: 18px 23px;
+  border: none;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  padding: 18px 66px;
+  border-radius: 4px;
+  background-color: #EC1F46;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -538,6 +575,10 @@ template {
 
 .hotel-info__description {
   margin: 4px 0;
+}
+
+.hotel-info__rating {
+  cursor: pointer;
 }
 
 .hotel-name {
@@ -1304,19 +1345,9 @@ template {
 }
 
 .footer__input {
-  height: 50px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  padding: 18px 23px;
-  border: none;
-  border-radius: 4px;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   margin-bottom: 15px;
 }
 
@@ -1325,15 +1356,7 @@ template {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   grid-column: span 2;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  padding: 18px 23px;
-  border: none;
-  border-radius: 4px;
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  resize: none;
   margin-bottom: 22px;
 }
 
@@ -1344,17 +1367,6 @@ template {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  width: 160px;
-  height: 50px;
-  padding: 18px 66px;
-  border-radius: 4px;
-  background-color: #EC1F46;
-  border: none;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #fff;
 }
 
 .footer__info {
@@ -1405,6 +1417,125 @@ template {
 .footer__last--icon {
   width: 22px;
   height: 14px;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  max-width: 478px;
+  padding: 33px 88px;
+  background-color: #0A223D;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
+  color: #fff;
+  border-radius: 8px;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.modal__input {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  grid-column: span 2;
+  margin-bottom: 15px;
+}
+
+.modal__input-2 {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+.modal__message {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  grid-column: span 2;
+  min-height: 123px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.modal__button {
+  -ms-grid-row: 5;
+  grid-row: 5;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.modal__info {
+  -ms-grid-row: 5;
+  grid-row: 5;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.modal__title {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal__info {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BDBDBD;
 }
 
 @media (max-width: 1200px) {
