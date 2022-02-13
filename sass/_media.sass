@@ -108,6 +108,7 @@
         margin-bottom: 75px
         grid-row: 8
         grid-column: span 2
+
     &__last
       grid-row: 9
       grid-column: 1 / 4
@@ -115,7 +116,7 @@
 
 @media (max-width: 768px)
   .container
-    max-width: 576px
+    max-width: 676px
     width: 92%
   body
     padding-top: 78px
@@ -247,6 +248,15 @@
   .card
     width: 49%
     height: 255px
+  .footer
+    &__input
+      &-group
+        flex-basis: 100%
+    &__message
+      width: 539px
+    &__last
+      grid-column: 1 / 3
+      flex-shrink: 1
 
 @media (max-width: 576px)
   .container
@@ -313,23 +323,11 @@
       &-form
         grid-row: 7
         grid-column: 1 / 1
-    &__form
-      grid-template-columns: 1fr 0
-      column-gap: 0
     &__input
-      grid-row: 1
-      &-2
-        grid-row: 2
+      &-group
+        width: 300px
     &__message
-      grid-row: 3
-      margin-bottom: 15px
-    &__info
-      grid-row: 5
-      grid-column: 1
-      padding: 15px 0px
-    &__button
-      grid-row: 5
-      grid-column: 1
+      width: 300px
     &__last
       grid-row: 8
       grid-column: 1
@@ -391,31 +389,32 @@
     &__social
       &-network
         flex-direction: column
-        align-items: start
+        align-items: flex-start
+        flex-wrap: nowrap
         margin-bottom: 0
     &__contacts
       &-form
         margin-bottom: 30px
     &__form
-      grid-template-columns: 1fr 0
-      column-gap: 0
-    &__input
-      grid-row: 1
-      &-2
-        grid-row: 2
-    &__message
-      grid-row: 3
-      margin-bottom: 0
+      align-items: flex-start
     &__info
-      grid-row: 4
-      grid-column: 1
-      justify-self: start
-      padding: 15px 0px
+      align-self: center
+
+@media (max-width: 320px)
+  .container
+    max-width: 300px
+  .subscribe
+    width: 99%
+  .footer
+    &__form
+      flex-direction: column
+    &__input
+      &-group
+        width: 240px
+    &__message
+      width: 240px
     &__button
-      grid-row: 5
-      grid-column: 1
-    &__last
-      grid-row: 8
-      grid-column: 1
-      align-self: end
-      max-width: 277px
+      order: 1
+    &__info
+      align-self: start
+      margin-top: 15px

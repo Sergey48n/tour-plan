@@ -58,7 +58,27 @@ $(document).ready(function () {
     modalDialog.removeClass('modal__dialog--visible');
   }
 
+ // Обработка форм
+ $(".form").each(function(){
+   $(this).validate({
+   debug: true,  
+   errorClass:"invalid",
+   messages: {
+    name: {
+      required: "Пожалуйста укажите ваше имя.",
+      minlength: "Имя не короче 3-х букв."
+    },
+    email: {
+      required: "Пожалуйста, введите адрес электронной почты",
+      email: "Адрес электронной почты должен быть в формате: name@domain.com"
+    },
+    phone: {
+      required:"Телефон обязателен", 
 
+    },
+   },
+  });
+ })
 
 });
 

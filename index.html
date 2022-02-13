@@ -54,7 +54,7 @@
           </li>
           <li class="navbar-menu__item navbar-menu__item--mobile_visible">
             <form action="#" class="search navbar__search navbar__search--mobile_visible">
-              <input type="text" class="search__input" placeholder="Searh location" />
+              <input type="text" class="search__input" placeholder="Searсh location" />
               <button class="search__button">
                 <img src="img/search.svg" alt="Icon: search" />
               </button>
@@ -213,8 +213,12 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="#" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Yuor email adress" />
+      <form action="#" class="subscribe newsletter__subscribe form">
+        <input type="text" class="subscribe__input"     
+               placeholder="Your email adress" 
+               required
+            
+        />
 
         <button class="subscribe__button">Send</button>
       </form>
@@ -464,11 +468,31 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contacts-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" />
-            <input type="text" class="input footer__input footer__input-2" placeholder="Phone Number*" name="phone" />
-            <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
-            <button class="button footer__button" type="submit">Send</button>
+          <form action="send.php" 
+                method="POST" 
+                class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" 
+                   class="input footer__input" 
+                   placeholder="Your Full Name*" 
+                   name="name"
+                   required
+                   minlength="3" 
+              />
+            </div>
+            <div class="footer__input-group">
+              <input type="text" 
+                   class="input footer__input" placeholder="Phone Number*" 
+                   name="phone"
+                   required
+              />
+            </div>
+            <textarea class="message footer__message" 
+                      placeholder="Message" 
+                      name="message">
+            </textarea>
+            <button class="button footer__button" 
+                    type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -506,9 +530,29 @@
         <img src="img/close.svg" alt="icone: close">
       </a>
       <h3 class="modal__title modal__title--mb-3">Booking</h3>
-      <form action="send.php" method="POST" class="modal__form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
-        <input type="text" class="input modal__input modal__input-2" placeholder="Phone Number*" name="phone" />
+      <form action="send.php" method="POST" class="modal__form form">
+        <input type="text" 
+               class="input modal__input" 
+               placeholder="Your Full Name*" 
+               name="name"
+               required
+               minlength="3"
+               
+        />
+        <input type="tel" 
+               class="input modal__input" 
+               placeholder="Phone Number*" 
+               name="phone"
+               required
+               
+        />
+        <input type="email" 
+               class="input modal__input"
+               placeholder="Your email adress*" 
+               name="email"
+               required
+        />
+        
         <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
         <button class="button modal__button" type="submit">Send</button>
         <span class="modal__info">* Required Fields</span>
@@ -525,11 +569,36 @@
         <img src="img/close.svg" alt="icone: close">
       </a>
       <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
-      <form action="send.php" method="POST" class="modal__form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
-        <input type="text" class="input modal__input modal__input-2" placeholder="Phone Number*" name="phone" />
-        <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-        <button class="button modal__button" type="submit">Send</button>
+      <form action="send.php" 
+            method="POST" 
+            class="modal__form form"
+      >
+
+        <input type="text" 
+               class="input modal__input" 
+               placeholder="Your Full Name*" 
+               name="name"
+               required
+               minlength="3"
+        />
+        <input type="tel" 
+               class="input modal__input"
+               placeholder="Phone Number*" 
+               name="phone"
+               required
+        />
+        <input type="email" 
+               class="input modal__input"
+               placeholder="Your email adress*" 
+               name="email"
+               required
+        />
+        <textarea class="message modal__message"     
+                  placeholder="Message" 
+                  name="message">
+        </textarea>
+        <button class="button modal__button" 
+                type="submit">Send</button>
         <span class="modal__info">* Required Fields</span>
       </form>
     </div>
@@ -541,6 +610,7 @@
   <scriptsr src="js/jquery-3.6.0.min.js">
     </script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
     <!-- Эффект параллакса 2 строки ниже за комментом -->
     <script src="js/parallax.min.js"></script>
